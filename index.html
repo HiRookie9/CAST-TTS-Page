@@ -31,10 +31,12 @@
 
     /* 确保td有足够空间并垂直居中内容 */
     td {
-        height: 60px;
-        vertical-align: middle;
-        padding: 2px 4px;
-        text-align: center;
+      display: flex;
+      align-items: center;     /* 垂直居中 */
+      justify-content: center; /* 水平居中 */
+      height: 60px;            /* 保持您需要的高度 */
+      padding: 2px 4px;
+      text-align: center;      /* 作为后备 */
     }
     .audio-wrapper {
       display: flex;
