@@ -14,7 +14,7 @@
       padding-top: 1.5rem !important;
       padding-bottom: 1.5rem !important;
     } 
-    .center-flex {            /* 根据需要调整 */
+    .center-flex {           
     display: flex;
     align-items: center;         /* 垂直居中 */
     justify-content: center;     /* 水平居中 */
@@ -22,19 +22,18 @@
     height: 100%;
     }
     td {
-      height: 60px; /* 必须有高度 */
-      vertical-align: middle !important; /* 使用 !important 提升优先级，防止被框架覆盖 */
+      height: 60px; 
+      vertical-align: middle !important; 
       text-align: center;
       padding: 2px 4px;
     }
 
-    /* 关键规则 2: 强制 audio 表现为行内块元素 */
     td audio {
         width: 100%;
         max-width: 100%;
-        height: 25px;
-        display: inline-block; /* 强制设置为 inline-block */
-        vertical-align: middle; /* 确保它与其他行内内容对齐 */
+        height: 35px;
+        display: inline-block; 
+        vertical-align: middle; 
     }
     .audio-wrapper {
       display: flex;
