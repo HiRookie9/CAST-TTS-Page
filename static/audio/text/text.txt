@@ -1,0 +1,12 @@
+YOU0000004724_S0000004
+5683_32865_000016_000002
+AUD0000001048_S0017204
+AUD0000001398_S0009935
+POD0000002954_S0000172
+{"id": "AUD0000001398_S0009935", "gender": "male", "age": "elderly", "speed": "fast", "expressiveness": "monotone", "pitch": "low-pitch"}
+{"id": "POD0000002954_S0000172", "gender": "female", "age": "teenager", "speed": "moderate speed", "expressiveness": "monotone", "pitch": "slightly low-pitch"}
+{"id": "AUD0000001670_S0003147", "gender": "female", "age": "young adult", "speed": "slightly fast", "expressiveness": "very expressive and animated", "pitch": "high-pitch"}
+{"id": "121_127105_000037_000000", "gender": "female", "age": "middle-aged adult", "speed": "moderate speed", "expressiveness": "slightly expressive and animated", "pitch": "slightly low-pitch"}
+{"id": "8455_210777_000023_000010", "gender": "male", "age": "middle-aged adult", "speed": "slowly", "expressiveness": "slightly expressive and animated", "pitch": "slightly low-pitch"}
+{"id": "260_123288_000013_000001", "gender": "male", "age": "young adult", "speed": "moderate speed", "expressiveness": "very monotone", "pitch": "slightly high-pitch"}
+POD0000006289_S0000061
