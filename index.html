@@ -21,27 +21,29 @@
     text-align: center;
     height: 100%;
     }
-    td audio {
-        width: 100%;     /* 宽度充满单元格 */
-        max-width: 100%; /* 最大宽度不超过单元格宽度 */
-        height: 25px;    /* 可以适当调整高度 */
+    td {
+      height: 60px; /* 必须有高度 */
+      vertical-align: middle !important; /* 使用 !important 提升优先级，防止被框架覆盖 */
+      text-align: center;
+      padding: 2px 4px;
     }
 
-    /* 确保td有足够空间并垂直居中内容 */
-    td {
-      height: 60px;
-      vertical-align: middle; /* 垂直居中 */
-      text-align: center;     /* 水平居中 */
-      padding: 2px 4px;
+    /* 关键规则 2: 强制 audio 表现为行内块元素 */
+    td audio {
+        width: 100%;
+        max-width: 100%;
+        height: 25px;
+        display: inline-block; /* 强制设置为 inline-block */
+        vertical-align: middle; /* 确保它与其他行内内容对齐 */
     }
     .audio-wrapper {
       display: flex;
-      align-items: center; /* 垂直居中 */
-      justify-content: center; /* 水平居中，可选 */
+      align-items: center;
+      justify-content: center;
       height: 25%;
     }
     .audio-wrapper audio {
-      width: 100%;        /* 让它自适应栏宽缩放 */
+      width: 100%;
       max-width: 100%;
       display: block;
       margin: 0 auto;
@@ -193,7 +195,7 @@
 
 <section class="section">
   <div class="container is-max-desktop">
-    <h2 class="title is-3 has-text-centered">speech-prompted TTS</h2>
+    <h2 class="title is-3 has-text-centered">Speech-Prompted TTS</h2>
     <table class="table is-striped is-hoverable is-fullwidth has-text-centered" style="table-layout: fixed;">
       <colgroup>
         <col style="width: 12%;">
@@ -311,7 +313,7 @@
 
 <section class="section">
   <div class="container is-max-desktop">
-    <h2 class="title is-3 has-text-centered">text-captioned TTS</h2>
+    <h2 class="title is-3 has-text-centered">Text-Captioned TTS</h2>
     <table class="table is-striped is-hoverable is-fullwidth has-text-centered" style="table-layout: fixed;">
       <colgroup>
         <col style="width: 22%;">
