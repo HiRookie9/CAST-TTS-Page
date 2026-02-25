@@ -21,11 +21,20 @@
     text-align: center;
     height: 100%;
     }
+    td audio {
+        width: 100%;     /* 宽度充满单元格 */
+        max-width: 100%; /* 最大宽度不超过单元格宽度 */
+        height: 25px;    /* 可以适当调整高度 */
+        display: block;  /* 确保它像一个块级元素 */
+        margin: 0 auto;  /* 水平居中 */
+    }
+
+    /* 确保td有足够空间并垂直居中内容 */
     td {
-      height: 60px;
-      vertical-align: middle;
-      padding: 2px 4px;
-      text-align: center;
+        height: 60px;
+        vertical-align: middle;
+        padding: 2px 4px;
+        text-align: center;
     }
     .audio-wrapper {
       display: flex;
