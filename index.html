@@ -16,8 +16,8 @@
     } 
     .center-flex {           
     display: flex;
-    align-items: center;         /* 垂直居中 */
-    justify-content: center;     /* 水平居中 */
+    align-items: center;         
+    justify-content: center;     
     text-align: center;
     height: 100%;
     }
@@ -103,9 +103,7 @@
       width: 80vw !important;
     }
   </style>
-  <!-- 可选: 引入Google Analytics -->
-  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR-ID"></script> -->
-  <!-- <script> ... </script> -->
+  
 
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
         rel="stylesheet">
@@ -127,8 +125,19 @@
       </h1>
       <div class="is-size-5 publication-authors">
         <span class="author-block">
-          <a href="#">Anonymous authors</a>
-        </span>
+          <a href="#">Zihao Zheng</a><sup>1,2</sup>,</span>
+        <span class="author-block">
+          <a href="#">Wen Wu</a><sup>1</sup>,</span>
+        <span class="author-block">
+          <a href="#">Chao Zhang</a><sup>1</sup>,</span>
+        <span class="author-block">
+          <a href="#">Mengyue Wu</a><sup>2</sup></span>
+        <span class="author-block">
+          <a href="#">Xuenan Xu</a><sup>1</sup>,</span> 
+      </div>
+      <div class="is-size-5 publication-authors">
+        <span class="author-block"><sup>1</sup>Shanghai AI Lab</span>
+        <span class="author-block"><sup>2</sup>MoE Key Lab of Artiffcial Intelligence, AI Institute, X-LANCE Lab, Shanghai Jiao Tong University</span>
       </div>
       <div class="publication-links" style="margin-top:10px;">
         <span class="link-block">
@@ -174,7 +183,7 @@
 <section class="section">
   <div class="container is-max-desktop">
     <div style="max-width: 900px; margin: 0 auto 24px auto; font-size: 1.08em; color: #444;">
-      we propose CAST-TTS, a simple yet effective framework for unified timbre control. We leverage powerful pre-trained encoders to extract features from both the speech prompt and the text caption. Subsequently, we project the text features into the same representation space occupied by the speech prompt embeddings. A single cross-attention mechanism then allows the model to use either of these representations to control the timbre. Extensive ablation studies validate the unified cross-attention mechanism is critical for achieving high-quality synthesis.
+      we propose CAST-TTS, a simple yet effective framework for unified timbre control. We leverage powerful pre-trained encoders to extract features from both the speech and text prompts. Subsequently, we project the text features into the same representation space occupied by the speech prompt embeddings. A single cross-attention mechanism then allows the model to use either of these representations to control the timbre. A multi-stage training strategy is adopted to optimize cross-modal alignment. Extensive ablation studies validate that the unified cross-attention mechanism is critical for achieving high-quality synthesis.
     </div>
   </div>
 </section>
@@ -185,7 +194,7 @@
       <h2 class="title is-3 has-text-centered">Model</h2>
       <div class="intro-image-block">
 
-        <!-- 可添加介绍文字 -->
+        
         <img src="./static/photo/model.png" alt="模型结构" class="intro-image">
       </div>
     </div>
@@ -253,20 +262,20 @@
         </tr>
         <tr>
           <td>
-            <audio controls src="static/audio/speech/prompt/672-122797-0073.flac"></audio>
+            <audio controls src="static/audio/speech/prompt/3570-5695-0007.flac"></audio>
           </td>
-          <td>The wood flamed up splendidly under the large brewing copper, and it sighed so deeply!</td>
+          <td>There is no class and no country that has yielded so abjectly before the pressure of physical want as to deny themselves all gratification of this higher or spiritual need.</td>
           <td>
-            <audio controls src="static/audio/speech/f5tts/672-122797-0073.wav"></audio>
-          </td>
-          <td>
-            <audio controls src="static/audio/speech/maskgct/672-122797-0073.wav"></audio>
+            <audio controls src="static/audio/speech/f5tts/3570-5695-0007.wav"></audio>
           </td>
           <td>
-            <audio controls src="static/audio/speech/zipvoice/672-122797-0073.wav"></audio>
+            <audio controls src="static/audio/speech/maskgct/3570-5695-0007.wav"></audio>
           </td>
           <td>
-            <audio controls src="static/audio/speech/cast/672-122797-0073.wav"></audio>
+            <audio controls src="static/audio/speech/zipvoice/3570-5695-0007.wav"></audio>
+          </td>
+          <td>
+            <audio controls src="static/audio/speech/cast/3570-5695-0007.wav"></audio>
           </td>
         </tr>
         <tr>
@@ -289,20 +298,20 @@
         </tr>
         <tr>
           <td>
-            <audio controls src="static/audio/speech/prompt/1580-141084-0047.flac"></audio>
+            <audio controls src="static/audio/speech/prompt/4446-2275-0033.flac"></audio>
           </td>
-          <td>I have a letter here, mister Soames, which I wrote to you early this morning in the middle of a restless night.</td>
+          <td>What I mean is that I want you to promise never to see me again, no matter how often I come, no matter how hard I beg.</td>
           <td>
-            <audio controls src="static/audio/speech/f5tts/1580-141084-0047.wav"></audio>
-          </td>
-          <td>
-            <audio controls src="static/audio/speech/maskgct/1580-141084-0047.wav"></audio>
+            <audio controls src="static/audio/speech/f5tts/4446-2275-0033.wav"></audio>
           </td>
           <td>
-            <audio controls src="static/audio/speech/zipvoice/1580-141084-0047.wav"></audio>
+            <audio controls src="static/audio/speech/maskgct/4446-2275-0033.wav"></audio>
           </td>
           <td>
-            <audio controls src="static/audio/speech/cast/1580-141084-0047.wav"></audio>
+            <audio controls src="static/audio/speech/zipvoice/4446-2275-0033.wav"></audio>
+          </td>
+          <td>
+            <audio controls src="static/audio/speech/cast/4446-2275-0033.wav"></audio>
           </td>
         </tr>
       </tbody>
@@ -312,7 +321,7 @@
 
 <section class="section">
   <div class="container is-max-desktop">
-    <h2 class="title is-3 has-text-centered">Text-Captioned TTS</h2>
+    <h2 class="title is-3 has-text-centered">Text-Prompted TTS</h2>
     <table class="table is-striped is-hoverable is-fullwidth has-text-centered" style="table-layout: fixed;">
       <colgroup>
         <col style="width: 22%;">
@@ -377,7 +386,7 @@
     </table>
   </div>
 </section>
-<!-- 这里可以加你的正文内容，例如demo播放器介绍等 -->
+
 
 </body>
 </html>
